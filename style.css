@@ -1,0 +1,218 @@
+:root {
+    --pink: #e66465;
+    --purple: #9198e5;
+    --yellow: #FCCF14;
+}
+
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 120%;
+    margin: 3vw;
+    text-align: center;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 1%;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    background-image: linear-gradient(0.25turn, var(--pink), #ebf8e1, var(--purple));
+    box-sizing: border-box;
+    /* google font */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-evenly;
+	align-items: center;
+	/* margin-left: 2%;
+    margin-right: 2%; */
+    /* margin-right: 3.5%; */
+}
+
+.container1a {
+    order:1;
+    width: 30%;
+}
+
+.container1b {
+    order:2;
+    width: 60%;
+}
+
+.calendar, .project, .progress, .quote {
+	/* width: 30vw;
+	height: 10vw; */
+	padding: 1%;
+	margin: 1%;
+	background-color: rgba(64, 0, 183, 0.075);
+	box-shadow: 0 4% 8% rgba(0,0,0,0.1);
+	border-radius: 2%;
+	text-align: center;
+}
+
+.calendar h2, .project h2, .progress h2, .quote h2 {
+	font-size: 100%;
+	/* color: #555; */
+}
+
+/*Project styles*/
+
+/*Calendar styles*/
+.calendar {
+    width: 100%;
+    height: 100%;
+}
+
+/*Progress styles*/
+.progress ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.progress li {
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+/*Quote styles*/
+.quote p {
+	font-size: 18px;
+	color: #777;
+	margin: 0;
+	padding-top: 20px;
+}
+
+/* style hamburger menu for mobile */
+a.menu-icon {
+	display: block;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5rem 1rem;
+}
+
+/* style the links */
+
+nav a:link,
+nav a:visited,
+footer a:link,
+footer a:link {
+    color: var(white);
+    text-decoration: none;
+}
+
+a:hover {
+    /* color: var(blue); */
+    font-weight: bold;
+    /* background-color: var(--yellow); */
+}
+
+a:active {
+    /* color: var(blue); */
+    font-weight: bold;
+    /* background-color: var(--yellow); */
+}
+
+/* footer */
+.container2 {
+    /* background-color: var(--pink); */
+    text-decoration: none;
+    /* color: var(--white); */
+    /* border-top: 5px var(--black) solid; */
+    /* padding-left: 1%; */
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 5.5%;
+    /* color: rgb(219, 60, 113); */
+}
+
+.footer-block {
+    display: inline-block;
+    /* padding: 1rem; */
+}
+
+
+/* navigation: hamburger menu icon appears at screen sizes less than 768px. */
+@media screen and (min-width: 769px) {
+	header {
+		display: flex;
+	}
+
+	a.menu-icon {
+		display: none;
+	}
+
+	.ul.navbar-list {
+		display: flex;
+		justify-content: space-around;
+		font-size: 1.25rem;
+	}
+    
+    a.navlogo {
+        flex:1;
+    }
+
+	nav.navbar {
+		flex: 2;
+	} 
+}
+
+/* media query to adjust screen change */
+@media screen and (max-width: 768px) {
+    nav.navbar {
+        display: none;
+    }
+}
+
+/* footer blocks stack on top of each other in one column at screen size less than 768px */
+@media screen and (max-width:768px) {
+    .container {
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+/* Batman card:  displays content side by side at screen size of at least 1024px.  */
+@media screen and (min-width:1024px) {
+    .card {
+        display:flex;
+    }
+}
+
+/* Add horizontal scrollbar to `admin.html` table at mobile screen size */
+@media screen and (max-width:767px) {
+    .admin-table {
+        overflow-x: auto;
+    }
+}
+
+/* challanges and milestones */
+.section {
+    margin: auto;
+    padding-bottom: 3%;
+}
+
+.collectionDisplay {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Displays {
+    display: inline-block;
+    text-align: center;
+}
+
+.Displays img {
+    margin-left: -2%;
+    width: 65%;
+    padding: 2%;
+}
