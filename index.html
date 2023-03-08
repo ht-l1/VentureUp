@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Personal Organizer</title>
+	<title>My Personal Project</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
     <!-- awesome font -->
     <script src="https://kit.fontawesome.com/f2df0e5efa.js" crossorigin="anonymous"></script>
     <!-- load google font -->
@@ -19,7 +20,7 @@
         <nav class="navbar">
             <div>Welcome, my CodeSquad audience!
                 <i class="fa fa-handshake-o" aria-hidden="true"></i>
-            </div><br>
+            </div><br><br>
             <!-- weather option1 -->
             <!-- <div id="ww_3aa201cd1c156" v='1.3' loc='auto' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl1"],"font":"Arial","sl_ics":"one_a","sl_sot":"fahrenheit","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Weather Data Source: <a href="https://tiempolargo.com/" id="ww_3aa201cd1c156_u" target="_blank">Tiempo a 25 días</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_3aa201cd1c156"></script> -->
 
@@ -43,7 +44,7 @@
             <div class="project">
                 <h2><i class="fa fa-area-chart" aria-hidden="true"></i>
                 Project</h2>
-                <a href="milestones.html">MilesStones</a><br><br>
+                <a href="milestones.html">MilesStones</a><br>
             </div>
             
             <!--Progress code goes here-->
@@ -56,6 +57,14 @@
                   </svg>
             </div>
         
+            <!-- Journal -->
+            <div class="prompt">
+            <h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i> Journal Ideas</h2>
+            <div id="prompt">
+                <div id="prompt-container">
+                <button onclick="generatePrompt()">Generate Prompt</button>
+            </div></div></div>
+
             <!--Daily Quote code goes here-->
             <div class="quote">
                 <!-- <h2><i class="fa fa-heart" aria-hidden="true"></i> Quote</h2> -->
@@ -71,20 +80,23 @@
                 <iframe src="https://calendar.google.com/calendar/embed?src=5a6895e4bc0adb49c6f83fc9cf79ca44d091ed52170a38559ec4453b6ebb664e%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width=100%" height="400vw" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
+
+        <button id="scroll">Scroll to Top</button>
+
     </div>
 </body>
 
 <footer>
     <div class="container2">
         <div class="footer-block">
-            <h3>VISIT US</h3>
-            <p>Boston, MA 02124</p>
+            <h3>CONTACT ME</h3>
+            <a href="contact.html">Contact Form</a>
         </div>
         <div class="footer-block">
             <h3>LINKS</h3>
-            <a href=#>Home</a>
-            <a href=#>About</a>
-            <a href=#>Login</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="puppies.html">puppies!</a>
         </div>
         <div class="footer-block">
             <h3>FOLLLOW US</h3>

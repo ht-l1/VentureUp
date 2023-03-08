@@ -45,7 +45,7 @@ body {
     width: 60%;
 }
 
-.calendar, .project, .progress, .quote {
+.calendar, .project, .progress, .quote, .prompt {
 	/* width: 30vw;
 	height: 10vw; */
 	padding: 1%;
@@ -56,7 +56,7 @@ body {
 	text-align: center;
 }
 
-.calendar h2, .project h2, .progress h2, .quote h2 {
+.calendar h2, .project h2, .progress h2, .quote h2, .prompt h2 {
 	font-size: 100%;
 	/* color: #555; */
 }
@@ -166,6 +166,23 @@ a:active {
 	} 
 }
 
+/* scroll button */
+#scroll {
+    /* display: none;  */
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    z-index: 99;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    background-color: #8d8585;
+    color: white;
+    cursor: pointer;
+    padding: 0.8%;
+    border-radius: 1%;
+  }
+
 /* media query to adjust screen change */
 @media screen and (max-width: 768px) {
     nav.navbar {
@@ -195,7 +212,7 @@ a:active {
     }
 }
 
-/* challanges and milestones */
+/* page: challanges */
 .section {
     margin: auto;
     padding-bottom: 3%;
@@ -215,4 +232,84 @@ a:active {
     margin-left: -2%;
     width: 65%;
     padding: 2%;
+}
+
+/* page: intro */
+.intro {
+    text-align: center;
+    padding-bottom: 1%;
+    width: 50vw;
+    margin: auto;
+}
+
+.introimage {
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+/* page: contact */
+form {
+    max-width: 30%;
+    margin: auto;
+    background-color: #efe9e9;
+    padding: 2%;
+    border-radius: 1%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 2%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 2%;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 1%;
+    border-radius: 1%;
+    border: none;
+    margin-bottom: 3%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 1%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  /* page: puppies */
+.slideshow-container {
+  margin: 0 auto;
+  max-width: 50%;
+  position: relative;
+  /* padding: 5%; */
+  margin-bottom: 35%;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slideshow-container .slide:first-child {
+  display: block;
 }
