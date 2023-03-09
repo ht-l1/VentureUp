@@ -55,7 +55,7 @@ const prompts = [
   }
   generatePrompt();
 
-//   page: puppies - also not working?
+//   page: puppies - not working?
 var slideIndex = 0;
 showSlides();
 

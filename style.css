@@ -12,13 +12,27 @@
     text-align: center;
 }
 
+.navigation {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: space-between;
+    padding-right: 6%;
+}
+
+.navigation li {
+    padding: 2%;
+}
+
 body {
     max-width: 100%;
     min-height: 100vh;
     margin: auto;
     padding: 1%;
     overflow-x: hidden;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-image: linear-gradient(0.25turn, var(--pink), #ebf8e1, var(--purple));
     box-sizing: border-box;
     /* google font */
@@ -105,7 +119,7 @@ nav a:link,
 nav a:visited,
 footer a:link,
 footer a:link {
-    color: var(white);
+    color: lightslategray;
     text-decoration: none;
 }
 
@@ -248,24 +262,35 @@ a:active {
 }
 
 /* page: contact */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    /* padding-right: 15%; */
+}
+
+.map {
+    padding-right: 5%;
+}
+
 form {
-    max-width: 30%;
+    max-width: 100%;
     margin: auto;
     background-color: #efe9e9;
-    padding: 2%;
+    padding: 8%;
     border-radius: 1%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin-bottom: 2%;
   }
 
-  label {
+label {
     display: block;
     margin-bottom: 2%;
   }
   
-  input[type="text"],
-  input[type="email"],
-  textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 1%;
     border-radius: 1%;
@@ -274,7 +299,7 @@ form {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
   }
   
-  button[type="submit"] {
+button[type="submit"] {
     background-color: #4CAF50;
     color: #fff;
     padding: 1% 2%;
@@ -282,11 +307,11 @@ form {
     border-radius: 1%;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
+}
   
-  button[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #3e8e41;
-  }
+}
 
   /* page: puppies */
 .slideshow-container {
@@ -312,4 +337,35 @@ form {
 
 .slideshow-container .slide:first-child {
   display: block;
+}
+
+/* services section css */
+.cards {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 3%;
+    flex-wrap: wrap;
+    width: 40%;
+    text-align: center;
+}
+
+.servicesText.card {
+    /* height: 300; */
+    cursor: pointer;
+}
+
+.servicesIcon {
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
 }
