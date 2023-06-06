@@ -1,39 +1,29 @@
-// First, require the following dependencies: express and morgan
-// Create a const variable called app with the value of express()
-// Create a const variable called port with the value of 3000
-// Use morgan as a middleware for this project
-
 const express = require('express');
 const morgan = require('morgan');
-
+const path = require('path');
+const methodOverride = require('method-override');
+const routes = require('./routes/index');
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
+app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(morgan('dev'));
+app.use(routes);
 
-// Create five  basic GET routes with the following information
+require('./config/connection');
 
-app.get('/', (req, res) => {
-  res.send('This route points to the Home page');
+
+// to delete
+app.get('/about', (request, response) => {
+    response.send('This is the about page.');
 });
 
-app.get('/about', (req, res) => {
-  res.send('This route points to the About page');
-});
 
-app.get('/login', (req, res) => {
-  res.send('This route points to the Login page');
-});
-
-app.get('/admin-console', (req, res) => {
-  res.send('This route points to the Admin Console page');
-});
-
-app.get('/admin-console/create-book', (req, res) => {
-  res.send('This route points to the Create page');
-});
-
-// use app.listen() to start the server and send a console.log to the terminal with the localhost URL
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost: ${port}`);
+app.listen(PORT, () => {
+    console.log(`The server is listening on port ${PORT}`);
 });

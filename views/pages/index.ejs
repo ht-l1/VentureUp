@@ -1,0 +1,56 @@
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
+
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
+
+     <div class="container">
+        <div class="container1a">
+            
+            <!--Project code goes below-->
+            <div class="project">
+                <h2><i class="fa fa-area-chart" aria-hidden="true"></i>
+                Project</h2>
+                <a href="../pages/challenges.ejs">MilesStones</a><br>
+            </div>
+            
+            <!--Progress code goes here-->
+            <div class="progress">
+                <h2><i class="fa fa-battery-half" aria-hidden="true"></i> Progress</h2>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="gray" stroke-width="2" fill="none" />
+                    <path d="M 50 50 L 50 10 A 40 40 0 0 1 73.205 29.644 Z" fill="blue" />
+                    <text x="50" y="55" text-anchor="middle" font-size="16" fill="black">50%</text>
+                  </svg>
+            </div>
+        
+            <!-- Journal -->
+            <div class="prompt">
+            <h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i> Journal Ideas</h2>
+            <div id="prompt">
+                <div id="prompt-container">
+                <button onclick="generatePrompt()">Generate Prompt</button>
+            </div></div></div>
+
+            <!--Daily Quote code goes here-->
+            <div class="quote">
+                <!-- <h2><i class="fa fa-heart" aria-hidden="true"></i> Quote</h2> -->
+                <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                <small><i><a href="/quote_of_the_day" target="_blank" rel="nofollow">more Quotes</a></i></small>
+            </div>
+        </div>
+
+        <div class="container1b">
+            <!--Calendar code goes below-->
+            <div class="calendar">
+                <h2><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?src=5a6895e4bc0adb49c6f83fc9cf79ca44d091ed52170a38559ec4453b6ebb664e%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width=100%" height="400vw" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <button id="scroll">Scroll to Top</button>
+
+    </div>
+
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>

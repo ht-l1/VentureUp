@@ -1,48 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Challenges</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js" defer></script>
-    <!-- awesome font -->
-    <script src="https://kit.fontawesome.com/f2df0e5efa.js" crossorigin="anonymous"></script>
-    <!-- load google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
 
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="navigation">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
 
-            <div>
-                <h1>Challenges <i class="fa-solid fa-mountain"></i></h1>
-            </div> 
-        </nav>
-
-        <!-- hamburger menu for mobile -->
-        <a href="javascript:void(0);" class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </a>
-    </header>
+<div>
+<h1>Challenges <i class="fa-solid fa-mountain"></i></h1>
+</div> 
 
     <div class="section">
         <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
@@ -97,27 +61,5 @@
 
 </body>
 
-<footer>
-    <div class="container2">
-        <div class="footer-block">
-            <h3>CONTACT ME</h3>
-            <a href="contact.html">Contact Form</a>
-        </div>
-        <div class="footer-block">
-            <h3>LINKS</h3>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="puppies.html">puppies!</a>
-        </div>
-        <div class="footer-block">
-            <h3>FOLLLOW US</h3>
-            <div class="icons">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-            </div>
-        </div>
-</footer>
-
-</html>
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>
