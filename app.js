@@ -17,13 +17,6 @@ app.use(routes);
 
 require('./config/connection');
 
-
-// to delete
-app.get('/about', (request, response) => {
-    response.send('This is the about page.');
-});
-
-
 app.listen(PORT, () => {
     console.log(`The server is listening on port ${PORT}`);
 });
