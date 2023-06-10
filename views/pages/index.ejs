@@ -52,7 +52,30 @@
             <div class="section">
                 <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
                 <div class="collectionDisplay">
-                    <div class="Displays">
+                    <!-- <div class="Displays"> -->
+                        <!-- Using a for...of loop, loop through the inventoryArray and display each book -->
+                        <% for ( const content of inventoryArray)  { %>
+                            <!-- <a href="/content/<%= content._id %>" class="Displays"> -->
+                                <div class="Displays">
+                                    <h3><%= content.name %></h3>
+                                    <div class="image"><img src="<%= content.image %>" alt="<%= content.image %>"></div>
+                                    <div class="name"><%= content.name %></div>
+                                    <div class="location"><%= content.location %></div>
+                                    <div class="hikedAt"><%= content.hikedAt %></div>
+                                    <div class="rating">
+                                    <% for(let i = 0; i < content.rating; i++) {%>
+                                        <i class="fas fa-star"></i>
+                                    <% }%>
+                                    </div>
+                                    <div class="details">
+                                        <a href="<%= content.details.link %>"><%= content.details.text %></a>
+                                      </div>
+                                </div>
+                            <!-- </a> -->
+                            <% } %> 
+
+                    <!-- move below to contentData.js -->
+                    <!-- <div class="Displays">
                         <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNDkxMzg0NzUvNzM3Yzg3MWQ4NTViY2M2YzQxNzIwODczYmI1NWQ5NmIuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="Roberts">
                         <div class="name">Mount Roberts</div>
                         <div class="place">Moultonborough, NH</div>
@@ -170,11 +193,11 @@
                             <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
                         </div>
                     <a href="https://www.alltrails.com/trail/us/massachusetts/borderland-state-park-loop-trail">Details</a>
-                    </div>
+                    </div> -->
 
-                </div>
+                <!-- </div> -->
             </div>
-
+        </div>
         </div>
 
         <button id="scroll">Scroll to Top</button>
