@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
+// destructure to get schema from mongoose
+// to work with data.js files
 const {Schema} = mongoose;
 
 const authorSchema = new Schema({
   firstName: {
     type: String,
+    // form validation _ Servier Side
     required: [true, 'A first name is required.'],
     minlength:[1,'Minimun length for the first name is 1 characters.']
   },
@@ -25,6 +28,8 @@ const authorSchema = new Schema({
   }
 });
 
+// create a new mongoose model that will take in 2 arguments, 'author' and authorSchema
 const Author = mongoose.model('Author', authorSchema);
 
+// module.exports the author variable
 module.exports = Author;
