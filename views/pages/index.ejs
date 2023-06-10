@@ -4,16 +4,17 @@
 <!-- insert nav.ejs -->
 <%- include('../partials/nav') %>
 
+
      <div class="container">
         <div class="container1a">
             
             <!--Project code goes below-->
             <div class="project">
                 <h2><i class="fa fa-area-chart" aria-hidden="true"></i>
-                Project</h2>
-                <a href="../pages/challenges.ejs">MilesStones</a><br>
+                Admin</h2>
+                <a href="../admin">Input Management</a><br>
             </div>
-            
+
             <!--Progress code goes here-->
             <div class="progress">
                 <h2><i class="fa fa-battery-half" aria-hidden="true"></i> Progress</h2>
@@ -42,10 +43,138 @@
 
         <div class="container1b">
             <!--Calendar code goes below-->
-            <div class="calendar">
+            <!-- <div class="calendar">
                 <h2><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</h2>
                 <iframe src="https://calendar.google.com/calendar/embed?src=5a6895e4bc0adb49c6f83fc9cf79ca44d091ed52170a38559ec4453b6ebb664e%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width=100%" height="400vw" frameborder="0" scrolling="no"></iframe>
+            </div> -->
+
+            <!-- try to revamp homepage! -->
+            <div class="section">
+                <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
+                <div class="collectionDisplay">
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNDkxMzg0NzUvNzM3Yzg3MWQ4NTViY2M2YzQxNzIwODczYmI1NWQ5NmIuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="Roberts">
+                        <div class="name">Mount Roberts</div>
+                        <div class="place">Moultonborough, NH</div>
+                        <div class="year">Hiked at: Mar 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                        <a href="https://www.alltrails.com/trail/us/new-hampshire/mount-roberts-trail">Details</a>
+                    </div>
+        
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMzczOTg0OTgvNjg1MzA4NDE3NjEyYjE3YzBkOTM5YTQ1YjZiYjEwMTAuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="willard">
+                        <div class="name">Mount Willard</div>
+                        <div class="place">Bretton Woodsh, NH</div>
+                        <div class="year">Hiked at: Feb 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/new-hampshire/mount-willard">Details</a>
+                    </div>
+        
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMzkxNzU0ODAvNWE1OTBjMjM5NDQzNzRjZTE3YzU4MDdlNjk5MDRlYzYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="pemi">
+                        <div class="name">Mount Pemi</div>
+                        <div class="place">Lincoln, NH</div>
+                        <div class="year">Hiked at: Jan 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/new-hampshire/mount-pemigewasset-trail-indian-head">Details</a>
+                    </div>
+
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjA0NDY0NjgvMTBhZTAzM2NlNjhjMWNjMWM2ZDZkZWYyZWVhOGE2MWIuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="major">
+                        <div class="name">Mount Major</div>
+                        <div class="place">Alton Bay, NH</div>
+                        <div class="year">Hiked at: Feb 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/new-hampshire/mount-major-and-brook-trail-loop">Details</a>
+                    </div>
+        
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjAzMzAxOTAvYWEwMDUyNjAwNzUwY2IxZjgyMWE5NGFkNGRjZWM5NDcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="wachusett">
+                        <div class="name">Mount Wachusett</div>
+                        <div class="place">Princeton, MA</div>
+                        <div class="year">Hiked at: March 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/massachusetts/wachusett-summit-loop">Details</a>
+                    </div>
+
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjAzMDQ2NjQvNWQ2ZTA2OWEzMjMyZDkzNmJmY2VkOWRhMDIxNTNlODguanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="wachusett">
+                        <div class="name">Mount Watatic</div>
+                        <div class="place">Ashburnham, MA</div>
+                        <div class="year">Hiked at: Jan 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/massachusetts/mount-watatic#:~:text=Experience%20this%202.1%2Dmile%20out,encounter%20other%20people%20while%20exploring.">Details</a>
+                    </div>
+
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjI1NDQ0MDAvN2EyODRjYTc1ZjYxYzgxMjkyNDA5ZDFmODY0MjIwZTguanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="wachusett">
+                        <div class="name">Great Brook Farm State Park</div>
+                        <div class="place">Carlisle, MA</div>
+                        <div class="year">Hiked at: May 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/massachusetts/great-brook-farm-woodchuck-chicken-and-beaver-loop-trail">Details</a>
+                    </div>
+
+                    <div class="Displays">
+                        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNTk5Njc4NjcvNTkyMTAwZTNiMTZlYTdkZDNhM2ZhY2E5N2MyYmRlOTIuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" alt="wachusett">
+                        <div class="name">Borderland State Park</div>
+                        <div class="place">Easton, MA</div>
+                        <div class="year">Hiked at: May 2023</div>
+                        <div class="rating">
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                            <span style="font-size:100%;color:rgb(35, 83, 113);">&starf;</span>
+                        </div>
+                    <a href="https://www.alltrails.com/trail/us/massachusetts/borderland-state-park-loop-trail">Details</a>
+                    </div>
+
+                </div>
             </div>
+
         </div>
 
         <button id="scroll">Scroll to Top</button>

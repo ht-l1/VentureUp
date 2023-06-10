@@ -1,0 +1,93 @@
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
+
+
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
+
+<div>
+    <h1>Admin <i class="fa-solid fa-user"></i></h1>
+</div> <br>
+
+    <div class="section">
+        <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
+                
+        <div class="admin-table"> 
+            <form action="./admin-console/create-book" method="post">
+                <button type="submit">ADD NEW TRAIL</button>
+
+            <table class="admin">
+                <tr>
+                    <th>NAME</th>
+                    <th>LOCATION</th>
+                    <th>DATE</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+
+                <tr>
+                    <td>Mount Roberts</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+                
+                <tr>
+                    <td>Mount Willard</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+                
+                <tr>
+                    <td>Mount Pemi</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+                
+                <tr>
+                    <td>Mount Major</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+
+                <tr>
+                    <td>Mount Wachusett</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+
+                <tr>
+                    <td>Great Brook Farm State Park</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+
+                <tr>
+                    <td>Borderland State Park</td>
+                    <td>Moultonborough, NH</td>
+                    <td>Mar 2023</td>
+                    <td><button class="edit">EDIT</button></td>
+                    <td><button class="delete">DELETE</button></td>
+                </tr>
+            </table>
+            <button type="submit">Submit</button>
+        </div>  
+    </form>
+      
+</div> 
+
+</body>
+
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>

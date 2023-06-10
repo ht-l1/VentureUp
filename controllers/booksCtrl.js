@@ -14,6 +14,7 @@ module.exports = {
       }
     })
   },
+
   book_detail: (request, response) => {
     const {_id} = request.params;
     Book.findOne({_id: _id}, (error, foundBook) => {

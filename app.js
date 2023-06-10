@@ -6,6 +6,16 @@ const routes = require('./routes/index');
 const app = express();
 const PORT = 3000;
 
+// below is for contact page
+const contactRouter = require('./routes/contactRouter');
+app.use('/', contactRouter);
+
+const aboutRouter = require('./routes/aboutRouter');
+app.use('/', aboutRouter);
+
+const loginRouter = require('./routes/loginRouter');
+app.use('/', loginRouter);
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
