@@ -1,0 +1,38 @@
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
+
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+  <div class="row">
+
+      <div class="content">
+          <h3><%= inventoryItem.title %></h3>
+          <p>Content Detail</p>
+      </div>
+
+  </div>
+
+</section>
+
+
+<main>
+<p><strong>Name: </strong><%= inventoryItem.name %></p>
+<p><strong>Location:</strong> <%= inventoryItem.location %></p>
+<p><strong>hikedAt:</strong> $<%= inventoryItem.hikedAt %></p>
+<p><strong>Rating: </strong>
+  <% for(let i = 0; i < inventoryItem.rating; i++) {%>
+    <i class="fas fa-star"></i>
+  <% }%></p>
+  <!-- <p><strong>Synopsis:</strong> <%= inventoryItem.synopsis %></p> -->
+
+  <a href="/content" class="btn">back to content</a>
+</main>
+
+
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>

@@ -1,0 +1,35 @@
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
+
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
+
+<!-- main-content section starts  -->
+
+<section class="main-content" id="main-content">
+
+  <h1 class="heading"> <span>admin - content</span> </h1>
+
+      <div class="main-content-layout">
+
+        <% for (const content of inventoryArray)  { %>
+          <div class="box">
+              <div class="content">
+                  <h3><%= content.name %></h3>
+                  <p class="location"><%= content.location %></p>
+                  <a href="./<%= content._id %>/edit-content" class="btn">edit</a> 
+                  <form action="/content/<%= content._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                    <button class="btn" type="submit">delete</button>
+                  </form>   
+              </div>
+          </div>
+          <% } %> 
+
+        </div>
+
+</section>
+
+<!-- main-content section ends -->
+
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>

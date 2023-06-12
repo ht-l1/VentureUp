@@ -7,7 +7,7 @@ module.exports = {
       if(error){
         return error;
       } else {
-        response.render('pages/index', {
+        response.render('pages/admin', {
             copyrightYear: siteData.year,
             inventoryArray: allContent
         });
@@ -31,7 +31,7 @@ module.exports = {
   content_create_post: (request, response) => {
     const {image, name, location, hikedAt, rating, details} = request.body;
     const newContent = new Content ({
-      image: imgSrc,
+      image: image,
       name: name,
       location: location,
       hikedAt: hikedAt,
@@ -41,7 +41,7 @@ module.exports = {
 
     newContent.save();
 
-    response.redirect("/admin/admin-Content"); 
+    response.redirect("/contentCreate"); 
   },
   content_update_put: (request, response) => {
     const {_id} = request.params;

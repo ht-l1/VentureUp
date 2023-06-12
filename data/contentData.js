@@ -77,10 +77,10 @@ module.exports = [
   {
     _id: uuid(),
     image: 'https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMjI1NDQ0MDAvN2EyODRjYTc1ZjYxYzgxMjkyNDA5ZDFmODY0MjIwZTguanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJqcGVnIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==',
-    name: "Great Brook Farm State Park",
+    name: "Great Brook Farm",
     location: "Carlisle, MA",
     hikedAt: "May 2023",
-    rating: "5",
+    rating: "4",
     details: {
       text: "details",
       link: "https://www.alltrails.com/trail/us/massachusetts/great-brook-farm-woodchuck-chicken-and-beaver-loop-trail"
@@ -92,7 +92,7 @@ module.exports = [
     name: "Borderland Sate Park",
     location: "Easton, MA",
     hikedAt: "May 2023",
-    rating: "5",
+    rating: "4",
     details: {
       text: "details",
       link: "https://www.alltrails.com/trail/us/massachusetts/borderland-state-park-loop-trail"

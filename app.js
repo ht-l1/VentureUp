@@ -18,6 +18,10 @@ app.use('/', aboutRouter);
 const loginRouter = require('./routes/loginRouter');
 app.use('/', loginRouter);
 
+const contentRouter = require('./routes/contentRouter');
+app.use('/content', contentRouter);
+
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
