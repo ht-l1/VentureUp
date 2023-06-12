@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const contentSchema = new Schema({
-  image: {
-    type: String
-  },
+  // image: {
+  //   type: String
+  // },
   name: {
     type: String,
     required: [true, 'A first name is required.'],

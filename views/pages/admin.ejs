@@ -13,8 +13,15 @@
         <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
                 
         <div class="admin-table"> 
-            <form action="./contentCreate" method="post">
-                <button type="submit">ADD NEW HIKE</button>
+            <div class="adminform">
+                
+                <form action="./adminCtrl/create-book" method="post">
+                <button type="add">ADD NEW HIKE</button></form>
+            
+                <!-- <a href="./contentCreate" method="post">
+                <button type="add">ADD NEW HIKE</button></a> -->
+
+            </div>
 
             <table class="admin">
                 <tr>
@@ -29,63 +36,61 @@
                     <td>Mount Roberts</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
                 
                 <tr>
                     <td>Mount Willard</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
                 
                 <tr>
                     <td>Mount Pemi</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
                 
                 <tr>
                     <td>Mount Major</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
 
                 <tr>
                     <td>Mount Wachusett</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
 
                 <tr>
                     <td>Great Brook Farm State Park</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
 
                 <tr>
                     <td>Borderland State Park</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
-                    <td><button class="edit">EDIT</button></td>
-                    <td><button class="delete">DELETE</button></td>
+                    <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
+                    <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr>
             </table>
-            <button type="submit">SUBMIT</button>
+            <div class="adminform2"><form action="./admin" method="post"><button type="submit">SUBMIT</button></form></div>
         </div>  
-    </form>
-      
-</div> 
+    </div>
 
 </body>
 
