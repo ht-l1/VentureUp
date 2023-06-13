@@ -1,6 +1,5 @@
 const siteData = require('../data/siteData');
-const Book = require('../models/bookModel');
-const Author = require('../models/authorModel');
+const Contact = require('../models/contactModel');
 
 module.exports = {
   contact: (request, response) => {

@@ -20,6 +20,7 @@ app.use('/', loginRouter);
 
 const contentRouter = require('./routes/contentRouter');
 app.use('/content', contentRouter);
+app.get('/contentCreate', contentCtrl.content_create_get);
 
 
 app.set('view engine', 'ejs');
