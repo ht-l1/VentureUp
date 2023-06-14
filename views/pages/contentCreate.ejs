@@ -4,40 +4,54 @@
 <!-- insert nav.ejs -->
 <%- include('../partials/nav') %>
 
-<main>
-  <h1 class="heading"> <span>Create Content</span> </h1>
-  <!-- <form action="./admin" method="POST"> -->
-    <div>
-        <label for="title">Title: </label>
-        <input type="text" name="title" id="title" minlength="1" required />
-    </div>
+  <h1 class="contentCreate"> <span>Create Content</span> </h1>
+    <form id="create-form" action="/admin" method="POST">
+        
+        <div class="row">
+            <div class="columnL">
+                <img src="https://e0.pxfuel.com/wallpapers/279/989/desktop-wallpaper-adventure-is-out-there-iphone-11-aventure.jpg" width=100% height=100% alt="adventure">
+                
+            </div>
+            <div class="columnM">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="name"  minlength="1" required/>
+                </div>
+            
+                <div>
+                    <label for="location">Location: </label>
+                    <input type="text" name="location" id="location" placeholder="location" minlength="1" required />
+                </div>
+            
+                <div>
+                    <label for="hikedAt">HikedAt: </label>
+                    <input type="text" name="hikedAt" id="hikedAt" placeholder="time" minlength="1" required />
+                </div>
+            
+                <div class="rating">
+                    <label for="rating">Ratings: </label>
+                    <!-- <input type="number" name="rating" id="rating" min="1" max="5" required /> -->
+                    <select id="rating" name="rating" size="5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                </div>
+            
+                <div>
+                    <label for="details">Details</label>
+                    <textarea class="text-area-label" name="details" id="details" placeholder="Add any details you'd like to include"></textarea>
+                </div>
+            </div>
 
-    <div>
-        <label for="author">Author: </label>
-        <input type="text" name="author" id="author" minlength="5" required />
+        <div class="columnR">
+            <img src="https://w0.peakpx.com/wallpaper/485/381/HD-wallpaper-white-van-parked-on-road-side.jpg" width=100% height=100% alt="adventure">
+        </div>
     </div>
-
-    <div>
-        <label for="price">Price: </label>
-        <input type="number" name="price" id="price" min="1" required />
-    </div>
-
-    <div>
-        <label for="starRating">Star Ratings: </label>
-        <input type="number" name="starRating" id="starRating" min="1" max="5" required />
-    </div>
-
-    <div>
-        <label for="synopsis">Synopsis:</label>
-        <textarea class="text-area-label" name="synopsis" id="synopsis" placeholder="Synopsis"></textarea>
-    </div>
-
-    <div>
-        <input type="submit" value="Submit"/>
-    </div>
-
-<!-- </form> -->
-</main>
+    <button type="submit">Submit</button>
+    </form>    
 
 <!-- insert footer.ejs -->
 <%- include('../partials/footer') %>

@@ -7,23 +7,24 @@ const contentSchema = new Schema({
   // },
   name: {
     type: String,
-    required: [true, 'A first name is required.'],
-    minlength:[1,'Minimun length for the first name is 1 characters.']
+    required: [true, 'Name is required.'],
+    minlength:[1,'Minimun length for the name is 1 character.']
   },
   location: {
     type: String,
-    required: [true, 'The author\'s name is required.'],
-    minlength:[5,'Minimun length for the author\'s name is 5 characters.']
+    required: [true, 'Location is required.'],
+    minlength:[5,'Minimun length for the location is 1 character.']
   },
   hikedAt: {
     type: String,
-    required: [true, 'The price is required.'],
+    required: [true, 'Time is required.'],
+    minlength:[1,'Minimun length for the name is 1 character.']
     // min: [1, 'Minimun price is 1']
   },
   rating: {
     type: String,
-    required: [true, 'The price is required.'],
-    // min: [1, 'Minimun number of star rating is 1']
+    required: [true, 'Rating is required.'],
+    // min: [1, 'Minimun number of rating is 1']
   },
   details: {
     type: String,

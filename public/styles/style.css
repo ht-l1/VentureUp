@@ -10,7 +10,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 120%;
-    margin: 3vw;
+    margin: 1%;
     text-align: center;
 }
 
@@ -396,8 +396,8 @@ button[type="submit"]:hover {
 /* admin page */
 
 .admin-table {
-    margin-top: -5%;
-    margin-bottom: -3%;
+    margin-top: -2%;
+    /* margin-bottom: -3%; */
 }
 
 .admin {
@@ -466,10 +466,9 @@ button[class="delete"] {
     padding-bottom: 1px;
 }
 
-.adminform2 form {
-    /* padding: 1% auto; */
+/* .adminform2 form {
     padding-top: 0;
-}
+} */
 
 h1 {
     text-align: center;
@@ -573,3 +572,49 @@ h1 {
 .login-form .action button:nth-child(2):hover {
   background: #3c4d6d;
 }
+
+
+/* contentCreate */
+
+  #create-form {
+    box-sizing: border-box;
+    /* text-align: center; */
+  }
+
+  #create-form label, #create-form input, #create-form select {
+    width: 80%;
+  }
+
+  #create-form .rating select {
+    width: 10%;
+    margin-left: 2%;
+  }
+
+  #create-form textarea {
+    width: 80%;
+    height: 10vh;
+  }
+
+  .row {
+    display: flex;
+    background-color: var(--lightgrey);
+    transition: background-color 0.3s ease-in-out;
+    width: 70%;
+    margin: auto;
+  }
+
+  .columnL {
+    flex: 10%;
+    height: 80vh; 
+  }
+
+  .columnM {
+    flex: 30%;
+    height: 80vh;
+  }
+
+
+  .columnR {
+    flex: 10%;
+    height: 80vh; 
+  }
