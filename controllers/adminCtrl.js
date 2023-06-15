@@ -3,25 +3,7 @@ const Content = require('../models/contentModel');
 
 module.exports = {
   // all_content: This method retrieves all content from the database using the Content model and renders the pages/admin view, passing the retrieved content as 'InventoryArray'
-  all_content: (request, response) => {
-    Content.find({}, (error, allContent) => {
-      if(error){
-        return error;
-      } else {
-        response.render('pages/admin', {
-            copyrightYear: siteData.year,
-            inventoryArray: allContent
-        });
-      }
-    })
-  },
-  // admin: This method renders the pages/admin view without any additional data.
-  // admin: (request, response) => {
-  //   response.render('pages/admin', {
-  //     copyrightYear: siteData.year,
-  //   });
-  // },
-  admin: async (request, response) => {
+  all_content: async (request, response) => {
     try {
       const allContent = await Content.find({});
       response.render('pages/admin', {
@@ -29,29 +11,48 @@ module.exports = {
         inventoryArray: allContent
       });
     } catch (error) {
-      // Handle the error
       console.error(error);
+      return;
     }
   },
+  
+  // admin: This method renders the pages/admin view without any additional data.
+  // admin: (request, response) => {
+  //   response.render('pages/admin', {
+  //     copyrightYear: siteData.year,
+  //   });
+  // },
+  // admin: async (request, response) => {
+  //   try {
+  //     const allContent = await Content.find({});
+  //     response.render('pages/admin', {
+  //       copyrightYear: siteData.year,
+  //       inventoryArray: allContent
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //     return;
+  //   }
+  // },
 // content detail page
-  content_detail: (request, response) => {
-    const {_id} = request.params;
-    Content.findOne({_id: _id}, (error, foundcontent) => {
-      if(error) {
-        return error;
-      } else {
-        response.render('pages/contentDetail', {
-          copyrightYear: siteData.year,
-          inventoryItem : foundContent
-        });
-      }
-    })
-  },
+content_detail: async (request, response) => {
+  try {
+    const { _id } = request.params;
+    const foundContent = await Content.findOne({ _id: _id });
+    response.render('pages/contentDetail', {
+      copyrightYear: siteData.year,
+      inventoryItem: foundContent
+    });
+  } catch (error) {
+    console.error(error);
+    return;
+  }
+},
 
   // create_content and actually submit: This method renders the pages/contentCreate view without any additional data.
-  submit_form: (request, response) => {
-    const {name, location, hikedAt, rating, details} = request.body;
-    const newContent = new Content ({
+  submit_form: async (request, response) => {
+    const { name, location, hikedAt, rating, details } = request.body;
+    const newContent = new Content({
       name: name,
       location: location,
       hikedAt: hikedAt,
@@ -59,12 +60,16 @@ module.exports = {
       details: details
     });
 
-    newContent.save();
-
-    response.redirect("/admin"); 
+    try {
+      await newContent.save();
+      response.redirect("/admin");
+    } catch (error) {
+      console.error(error);
+      return;
+    }
   },
 
-  create_content: (request, response) => {
+  create_content: async (request, response) => {
     response.render('pages/contentCreate', {
       copyrightYear: siteData.year,
     });
@@ -85,14 +90,14 @@ module.exports = {
   //   });    
   // },
   
-  content_delete: (request, response) => {
+  content_delete: async (request, response) => {
     const { _id } = request.params;
-    Content.deleteOne({_id: _id}, error => {
-      if(error) {
-        return error;
-      } else {
-        response.redirect('/pages/admin')
-      }
-    }); 
+    try {
+      await Content.deleteOne({ _id: _id });
+      response.redirect('/pages/admin');
+    } catch (error) {
+      console.error(error);
+      return;
+    }
   }
-}
+};

@@ -1,5 +1,5 @@
 const siteData = require('../data/siteData');
-const About = require('../models/aboutModel');
+// const About = require('../models/aboutModel');
 
 module.exports = {
   about: (request, response) => {

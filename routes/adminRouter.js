@@ -4,7 +4,7 @@ const adminCtrl = require('../controllers/adminCtrl');
 
 // ADMIN ROUTES
 router.route('/admin')
-  .get(adminCtrl.admin)
+  .get(adminCtrl.all_content)
   .post(adminCtrl.create_content);
 
 // router.route('/contentCreate')
@@ -14,8 +14,8 @@ router.route('/contentCreate')
   .get(adminCtrl.create_content)
   .post(adminCtrl.submit_form);
 
-router.route('/:_id')
-  .get(adminCtrl.content_detail)
-  .delete(adminCtrl.content_delete)
+router.route('/contentDelete/:_id')
+  .post(adminCtrl.content_delete);
+
 
 module.exports = router;

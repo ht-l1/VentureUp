@@ -32,22 +32,22 @@
                     <th>DELETE</th>
                 </tr>
 
-                <% for (const content of inventoryArray) { %>
-                    <!-- <tr> -->
+                <% for (const Content of inventoryArray) { %>
+                    <tr>
                     <td><%= content.name %></td>
                     <td><%= content.location %></td>
                     <td><%= content.hikedAt %></td>
                     <td>
                         <form action="/contentUpdate/<%= content._id %>" method="post">
-                        <button class="edit">EDIT</button>
-                        </form>
+                            <button class="edit">EDIT</button>
+                          </form>
                     </td>
                     <td>
                         <form action="/contentDelete/<%= content._id %>" method="post">
-                        <button class="delete">DELETE</button>
-                        </form>
+                            <button class="delete">DELETE</button>
+                          </form>
                     </td>
-                    <!-- </tr> -->
+                    </tr>
                 <% } %>
   
   

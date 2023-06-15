@@ -1,5 +1,5 @@
 const siteData = require('../data/siteData');
-const Contact = require('../models/contactModel');
+// const Contact = require('../models/contactModel');
 
 module.exports = {
   contact: (request, response) => {
