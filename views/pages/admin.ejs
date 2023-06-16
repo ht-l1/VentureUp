@@ -28,21 +28,26 @@
                     <th>NAME</th>
                     <th>LOCATION</th>
                     <th>DATE</th>
+                    <th>RATING</th>
+                    <th>DETAILS</th>
                     <th>EDIT</th>
                     <th>DELETE</th>
                 </tr>
-
+                <%- console.log(content) %>
                 <% for (const Content of content) { %>
                     <tr>
                     <td><%= Content.name %></td>
                     <td><%= Content.location %></td>
                     <td><%= Content.hikedAt %></td>
+                    <td><%= Content.rating %></td>
+                    <td><%= Content.details %></td>
+
                     <td>
-                        <form action="/contentUpdate/<%= content._id %>" method="post">
+                        <form action="/admin/<%= Content._id %>" method="update">
                             <button class="edit">EDIT</button></form>
                     </td>
                     <td>
-                        <form action="/contentDelete/<%= content._id %>" method="post">
+                        <form action="/admin/<%= Content._id %>" method="delete">
                             <button class="delete">DELETE</button></form>
                     </td>
                     </tr>
