@@ -1,0 +1,24 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+<div class="login-form">
+    <div class="content">
+        <h1> <span><i class="far fa-grin-stars"></i> New? REGISTER</span> </h1>
+            <form action="/register" method="POST">
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username" required />
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" required />
+            </div><br>
+            <div>
+                <input type="submit" value="Submit"/>
+            </div><br>
+            <p>Already have an account? <a href="/login">Login here!</a></p>
+            </form>
+        </div>
+    </div>
+<%- include('../partials/footer') -%> 

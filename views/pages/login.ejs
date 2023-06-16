@@ -5,27 +5,23 @@
 <%- include('../partials/nav') %>
 
 <div class="login-form">
-    <form>
-      <h1>Login</h1>
-
-      <div class="content">
-
-        <div class="input-field">
-          <input type="email" placeholder="Email" autocomplete="nope">
+    <div class="content">
+      <h1> <span><i class="far fa-smile"></i> Welcome Back! LOGIN</span> </h1>
+      <form action="/login" method="POST">
+        <div>
+            <label for="username">Username </label>
+            <input type="text" name="username" id="username" required />
         </div>
-
-        <div class="input-field">
-          <input type="password" placeholder="Password" autocomplete="new-password">
-        </div>
-        <a href="#" class="link">Forgot Your Password?</a>
-        
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required />
+        </div><br>
+        <div>
+            <input type="submit" value="Submit"/>
+        </div><br>
+        <p>Don't Have An Account? <a href="/register">Create one here.</a></p>
+      </form>
       </div>
-
-      <div class="action">
-        <button>Register</button>
-        <button>Sign in</button>
-      </div>
-    </form>
   </div>
 
 

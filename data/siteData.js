@@ -1,7 +1,7 @@
 let date = new Date();
 
 module.exports = {
-  userName: 'CodeSquader',
+  userName: 'stranger',
   year: date.getFullYear(),
   signedIn: true
 }

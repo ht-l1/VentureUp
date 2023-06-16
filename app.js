@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const path = require('path');
 const methodOverride = require('method-override');
 const PORT = 3000;
+// authentication
+const session = require('express-session');
+const passport = require('passport');
 
 // express app
 const app = express();
@@ -24,6 +27,16 @@ require('./config/connection');
 
 // register viewengie
 app.set('view engine', 'ejs');
+
+// authentication
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false
+  }))
+  
+app.use(passport.initialize());
+app.use(passport.session());
 
 // middleware & static files
 app.use(express.static(path.join(__dirname, 'public')));

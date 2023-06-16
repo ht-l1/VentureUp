@@ -13,7 +13,7 @@ const contentSchema = new Schema({
   location: {
     type: String,
     required: [true, 'Location is required.'],
-    minlength:[5,'Minimun length for the location is 1 character.']
+    minlength:[1,'Minimun length for the location is 1 character.']
   },
   hikedAt: {
     type: String,
