@@ -47,10 +47,10 @@
                             <button class="edit">EDIT</button></form>
                     </td>
                     <td>
-                        <form action="/admin/<%= Content._id %>" method="delete">
-                            <button class="delete">DELETE</button></form>
-                    </td>
-                    </tr>
+                        <form action="/admin/<%= Content._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
+                            <button class="btn" type="submit">delete</button>
+                          </form>  </td>
+                      
                 <% } %>
 
                 <!-- <tr>

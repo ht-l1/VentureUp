@@ -11,10 +11,8 @@ router.route('/contentCreate')
   .get(adminCtrl.create_content)
   // .post(adminCtrl.submit_form);
 
-  router.route('/admin/:_id')
-  .get(adminCtrl.content_detail)
-  .delete(adminCtrl.content_delete, (req, res, next) => {
-    res.redirect('/admin');
-  });
+router.route('/admin/:_id')
+  .get(adminCtrl.all_content)
+  .delete(adminCtrl.content_delete);
 
 module.exports = router;

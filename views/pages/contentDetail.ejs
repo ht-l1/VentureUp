@@ -4,35 +4,54 @@
 <!-- insert nav.ejs -->
 <%- include('../partials/nav') %>
 
-<!-- home section starts  -->
+  <h1 class="contentCreate"> <span>Create Content</span> </h1>
+    <form id="create-form" action="/admin" method="DELETE">
+        
+        <div class="row">
+            <!-- <div class="columnL">
+                <img src="https://e0.pxfuel.com/wallpapers/279/989/desktop-wallpaper-adventure-is-out-there-iphone-11-aventure.jpg" width=100% height=100% alt="adventure">
+                
+            </div> -->
+            <div class="columnM">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="name"  minlength="1" required />
+                </div>
+            
+                <div>
+                    <label for="location">Location: </label>
+                    <input type="text" name="location" id="location" placeholder="location" minlength="1" required />
+                </div>
+            
+                <div>
+                    <label for="hikedAt">HikedAt: </label>
+                    <input type="text" name="hikedAt" id="hikedAt" placeholder="time" minlength="1" required />
+                </div>
+            
+                <div class="rating">
+                    <label for="rating">Ratings: </label>
+                    <!-- <input type="number" name="rating" id="rating" min="1" max="5" required /> -->
+                    <select id="rating" name="rating" size="5">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                </div>
+            
+                <div>
+                    <label for="details">Details</label>
+                    <textarea class="text-area-label" name="details" id="details" placeholder="Add any details you'd like to include"></textarea>
+                </div>
+            </div>
 
-<section class="home" id="home">
-
-  <div class="row">
-
-      <div class="content">
-          <h3><%= inventoryItem.title %></h3>
-          <p>Content Detail</p>
-      </div>
-
-  </div>
-
-</section>
-
-
-<main>
-<p><strong>Name: </strong><%= inventoryItem.name %></p>
-<p><strong>Location:</strong> <%= inventoryItem.location %></p>
-<p><strong>hikedAt:</strong> $<%= inventoryItem.hikedAt %></p>
-<p><strong>Rating: </strong>
-  <% for(let i = 0; i < inventoryItem.rating; i++) {%>
-    <i class="fas fa-star"></i>
-  <% }%></p>
-  <!-- <p><strong>Synopsis:</strong> <%= inventoryItem.synopsis %></p> -->
-
-  <a href="/content" class="btn">back to content</a>
-</main>
-
+        <!-- <div class="columnR">
+            <img src="https://w0.peakpx.com/wallpaper/485/381/HD-wallpaper-white-van-parked-on-road-side.jpg" width=100% height=100% alt="adventure">
+        </div>
+    </div> -->
+    <button type="submit">Submit</button>
+    </form>    
 
 <!-- insert footer.ejs -->
 <%- include('../partials/footer') %>

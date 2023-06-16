@@ -1,6 +1,6 @@
   const siteData = require('../data/siteData');
   const Content = require('../models/contentModel');
-  const inventoryArray = require('../data/contentData.js');
+  // const inventoryArray = require('../data/contentData.js');
 
   module.exports = {
     // all_content: This method retrieves all content from the database using the Content model and renders the pages/admin view, passing the retrieved content as 'InventoryArray'
@@ -15,19 +15,19 @@
     },    
 
   // content detail page
-  content_detail: async (request, response) => {
-    try {
-      const { _id } = request.params;
-      const foundContent = await Content.findOne({ _id: _id });
-      response.render('pages/contentDetail', {
-        copyrightYear: siteData.year,
-        inventoryItem: foundContent
-      });
-    } catch (error) {
-      console.error(error);
-      return;
-    }
-  },
+  // content_detail: async (request, response) => {
+  //   try {
+  //     const { _id } = request.params;
+  //     const foundContent = await Content.findOne({ _id: _id });
+  //     response.render('pages/contentDetail', {
+  //       copyrightYear: siteData.year,
+  //       inventoryItem: foundContent
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //     return;
+  //   }
+  // },
 
     // create_content: This method renders the pages/contentCreate view without any additional data.
     
@@ -63,27 +63,15 @@
       }
     },
     
-    // content_delete: async (request, response) => {
-    //   const { _id } = request.params;
-    //   try {
-    //     await Content.deleteOne({ _id: _id });
-    //     response.redirect('/pages/admin');
-    //   } catch (error) {
-    //     console.error(error);
-    //     return;
-    //   }
-    // },
-
     content_delete: async (request, response) => {
       const { _id } = request.params;
       try {
         await Content.deleteOne({ _id: _id });
-        response.redirect('/admin');
+        response.redirect('/admin'); 
       } catch (error) {
         console.error(error);
         return;
       }
     },
-      
-    
+  
   };
