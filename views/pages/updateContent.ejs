@@ -3,10 +3,10 @@
 
 <!-- insert nav.ejs -->
 <%- include('../partials/nav') %>
-    
+
 <h1 class="contentCreate"> <span>Update Content</span> </h1>
 
-  <form action="/content/<%= foundContent._id %>?_method=PUT" method="POST">
+<form action="/content/<%= foundContent._id %>?_method=PUT" method="POST">
     <div>
       <label for="name">Name: </label>
       <input type="text" name="name" id="name" minlength="1" value="<%= foundContent.name %>" required />
