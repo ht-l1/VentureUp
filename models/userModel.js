@@ -84,7 +84,7 @@ passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
   // callbackURL: "http://localhost:3000/auth/google/admin",
-  callbackURL: "https://determined-garters-goat.cyclic.app",
+  callbackURL: "https://determined-garters-goat.cyclic.app/auth/google/admin",
 },
 function(accessToken, refreshToken, email, cb) {
   console.log(email);
