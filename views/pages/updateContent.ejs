@@ -3,33 +3,33 @@
 
 <!-- insert nav.ejs -->
 <%- include('../partials/nav') %>
+    
+<h1 class="contentCreate"> <span>Update Content</span> </h1>
 
-<main>
-  <h1 class="heading"> <span>update content</span> </h1>
   <form action="/content/<%= foundContent._id %>?_method=PUT" method="POST">
     <div>
-      <label for="title">Title: </label>
-      <input type="text" name="title" id="title" minlength="1" value="<%= foundBook.title %>" required />
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" minlength="1" value="<%= foundContent.name %>" required />
   </div>
 
   <div>
-      <label for="author">Author: </label>
-      <input type="text" name="author" id="author" minlength="5" value="<%= foundBook.author %>"required />
+      <label for="location">Location: </label>
+      <input type="text" name="location" id="location" minlength="5" value="<%= foundContent.location %>"required />
   </div>
 
   <div>
-      <label for="price">Price: </label>
-      <input type="number" name="price" id="price" min="1" value="<%= foundBook.price %>" required />
+    <label for="hikedAt">hikedAt: </label>
+    <input type="text" name="hikedAt" id="hikedAt" minlength="5" value="<%= foundContent.hikedAt %>"required />
+</div>
+
+  <div>
+      <label for="rating">Ratings: </label>
+      <input type="text" name="rating" id="rating" min="1" max="5" value="<%= foundContent.rating %>" required />
   </div>
 
   <div>
-      <label for="starRating">Star Ratings: </label>
-      <input type="number" name="starRating" id="starRating" min="1" max="5" value="<%= foundBook.starRating %>" required />
-  </div>
-
-  <div>
-      <label for="synopsis">Synopsis:</label>
-      <textarea class="text-area-label" name="synopsis" id="synopsis" ><%= foundBook.synopsis %></textarea>
+      <label for="details">Details:</label>
+      <textarea class="text-area-label" name="details" id="details" ><%= foundContent.details %></textarea>
   </div>
 
     <div>
@@ -37,7 +37,6 @@
     </div>
 
 </form>
-</main>
 
 <!-- insert footer.ejs -->
 <%- include('../partials/footer') %>

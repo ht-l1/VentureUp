@@ -19,7 +19,7 @@
                 <button type="add">ADD NEW HIKE</button></form> -->
 
                 <a href="./contentCreate">
-                <button type="add">ADD NEW HIKE</button></a>
+                <button type="add">ADD NEW ITEM</button></a>
 
             </div>
 
@@ -43,12 +43,11 @@
                     <td><%= Content.details %></td>
 
                     <td>
-                        <form action="/admin/<%= Content._id %>" method="update">
-                            <button class="edit">EDIT</button></form>
+                        <a href="./updateContent/<%= Content._id %>">EDIT</a>
                     </td>
                     <td>
                         <form action="/admin/<%= Content._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                            <button class="btn" type="submit">delete</button>
+                            <button class="btn" type="submit">DELETE</button>
                           </form>  </td>
                       
                 <% } %>

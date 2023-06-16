@@ -29,6 +29,7 @@
   //   }
   // },
 
+
     // create_content: This method renders the pages/contentCreate view without any additional data.
     
     create_content: async (request, response) => {
@@ -63,6 +64,38 @@
       }
     },
     
+    // UPDATE!!
+    content_update_get: async (request, response) => {
+      try {
+        const { _id } = request.params;
+        const foundContent = await Content.findOne({ _id }).exec();
+        response.render('pages/updateContent', {
+          copyrightYear: siteData.year,
+          foundContent: foundContent
+        });
+      } catch (error) {
+        console.error(error);
+        return;
+      }
+    },
+    
+    content_update_post: async (request, response) => {
+      const { _id } = request.params;
+      const { name, location, hikedAt, rating, details } = request.body;
+    
+      try {
+        await Content.updateOne(
+          { _id: _id },
+          { $set: { name, location, hikedAt, rating, details } }
+        );
+        response.redirect('/admin');
+      } catch (error) {
+        console.error(error);
+        return;
+      }
+    },
+
+    // DETELE!!
     content_delete: async (request, response) => {
       const { _id } = request.params;
       try {

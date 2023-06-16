@@ -7,10 +7,16 @@ router.route('/admin')
   .get(adminCtrl.all_content)
   .post(adminCtrl.submit_form)
 
+  // CREATE
 router.route('/contentCreate')
   .get(adminCtrl.create_content)
-  // .post(adminCtrl.submit_form);
 
+  // UPDATE
+router.route('/updateContent/:_id/')
+  .get(adminCtrl.content_update_get)
+  .post(adminCtrl.content_update_post);
+
+  // DELETE
 router.route('/admin/:_id')
   .get(adminCtrl.all_content)
   .delete(adminCtrl.content_delete);
