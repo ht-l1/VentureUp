@@ -14,11 +14,14 @@ router.route('/contentCreate')
   // UPDATE
 router.route('/updateContent/:_id/')
   .get(adminCtrl.content_update_get)
-  .post(adminCtrl.content_update_post);
+  // delete below and move under DELETE function because I want return admin page.
+  // .put(adminCtrl.content_update_put)
 
   // DELETE
 router.route('/admin/:_id')
   .get(adminCtrl.all_content)
-  .delete(adminCtrl.content_delete);
+  .delete(adminCtrl.content_delete)
+  // TEST!!
+  .put(adminCtrl.content_update_put);
 
 module.exports = router;

@@ -79,22 +79,42 @@
       }
     },
     
-    content_update_post: async (request, response) => {
-      const { _id } = request.params;
-      const { name, location, hikedAt, rating, details } = request.body;
+    // content_update_put: async (request, response) => {
+    //   const { _id } = request.params;
+    //   const { name, location, hikedAt, rating, details } = request.body;
     
+    //   try {
+    //     await Content.updateOne(
+    //       { _id: _id },
+    //       { $set: { name, location, hikedAt, rating, details } }
+    //     );
+    //     response.redirect('/admin');
+    //   } catch (error) {
+    //     console.error(error);
+    //     return;
+    //   }
+    // },
+
+    content_update_put: async (request, response) => {
       try {
-        await Content.updateOne(
-          { _id: _id },
-          { $set: { name, location, hikedAt, rating, details } }
-        );
+        const { _id } = request.params;
+        const { name, location, hikedAt, rating, details } = request.body;
+    
+        await Content.findByIdAndUpdate(_id, {
+          name: name,
+          location: location,
+          hikedAt: hikedAt,
+          rating: rating,
+          details: details
+        });
+    
         response.redirect('/admin');
       } catch (error) {
         console.error(error);
-        return;
+        response.status(500).send('Internal Server Error');
       }
     },
-
+    
     // DETELE!!
     content_delete: async (request, response) => {
       const { _id } = request.params;
@@ -106,5 +126,5 @@
         return;
       }
     },
-  
-  };
+    
+  }

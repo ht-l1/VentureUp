@@ -38,6 +38,15 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// below is provided by the offiical documentaiton but doesn't work
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: false,
+//   store: new SQLiteStore({ db: 'sessions.db', dir: './var/db' })
+// }));
+// app.use(passport.authenticate('session'));
+
 // middleware & static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));

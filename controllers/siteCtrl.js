@@ -44,7 +44,7 @@ module.exports = {
     }); 
   },
   login_get: (request, response) => {
-    response.render('pages/login',{
+    response.render('pages/login', {
       copyrightYear: siteData.year
     });
   },
@@ -69,5 +69,13 @@ module.exports = {
   logout:(request, response) => {
     request.logout();
     response.redirect('/');
-  }
+  },
+  google_get: passport.authenticate('google', {scope: ['openid', 'profile', 'email']}),
+  
+  google_redirect_get: [
+    passport.authenticate('google', {failureRedirect: '/login'}),
+    function(request, response) {
+      response.redirect('/admin');
+    }
+  ]
 }
