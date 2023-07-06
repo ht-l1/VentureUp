@@ -21,14 +21,14 @@ ___
 
 ___
 ## Project Screenshots
-<div align="center"><img width="505" alt="Index" src="https://github.com/ht-l1/VentureUp/assets/106502799/6f38139a-4cb8-4395-a036-a36e4a0f66d1"></div>
-<div align="center"><img width="505" alt="Admin" src="https://github.com/ht-l1/VentureUp/assets/106502799/14465a41-885b-4a73-a3aa-796e9ccd2d0b"></div>
-<div align="center"><img width="505" alt="CreateContent" src="https://github.com/ht-l1/VentureUp/assets/106502799/04ecc1a7-f4df-4c9e-b0b7-04b4585ece1d"></div>
-<div align="center"><img width="505" alt="UpdateContent" src="https://github.com/ht-l1/VentureUp/assets/106502799/1278fe60-f881-4516-83e9-62eb7c469e31"></div>
-<div align="center"><img width="505" alt="LogIn" src="https://github.com/ht-l1/VentureUp/assets/106502799/e60a6338-aaa7-4cc4-a8e1-ac359a5be98c"></div>
-<div align="center"><img width="505" alt="SignUp" src="https://github.com/ht-l1/VentureUp/assets/106502799/1e7ce37d-02ee-4063-8e96-651987c6bc23"></div>
-<div align="center"><img width="505" alt="ContanctMe" src="https://github.com/ht-l1/VentureUp/assets/106502799/bf0d99d9-36f3-4f65-a061-a63a8e12d65c"></div>
-___
+<div align="center"><img width="303" alt="Index" src="https://github.com/ht-l1/VentureUp/assets/106502799/6f38139a-4cb8-4395-a036-a36e4a0f66d1"></div>
+<div align="center"><img width="303" alt="Admin" src="https://github.com/ht-l1/VentureUp/assets/106502799/14465a41-885b-4a73-a3aa-796e9ccd2d0b"></div>
+<div align="center"><img width="303" alt="CreateContent" src="https://github.com/ht-l1/VentureUp/assets/106502799/04ecc1a7-f4df-4c9e-b0b7-04b4585ece1d"></div>
+<div align="center"><img width="303" alt="UpdateContent" src="https://github.com/ht-l1/VentureUp/assets/106502799/1278fe60-f881-4516-83e9-62eb7c469e31"></div>
+<div align="center"><img width="303" alt="LogIn" src="https://github.com/ht-l1/VentureUp/assets/106502799/e60a6338-aaa7-4cc4-a8e1-ac359a5be98c"></div>
+<div align="center"><img width="303" alt="SignUp" src="https://github.com/ht-l1/VentureUp/assets/106502799/1e7ce37d-02ee-4063-8e96-651987c6bc23"></div>
+<div align="center"><img width="303" alt="ContanctMe" src="https://github.com/ht-l1/VentureUp/assets/106502799/bf0d99d9-36f3-4f65-a061-a63a8e12d65c"></div>
+<!-- ___ -->
 <!-- ## Installation and Setup Instructions
 BACK END (npm)  -->
 <!-- Clone 
@@ -48,7 +48,7 @@ To Visit App  -->
 <!-- ___ -->
 <!-- ## Acknowledgements and Support <3
 `"[quote]"` -->
-<!-- ___ -->
+___
 ## Developer and Contact Info
 Hannah Lin
-Email: ht.techx@gmail.com, subject: “Github Project”
+Email: ht.techx@gmail.com
