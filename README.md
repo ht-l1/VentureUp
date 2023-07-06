@@ -7,7 +7,8 @@
 <p align="left">
 </p> -->
 
-## VentureUp 
+## VentureUp
+I have deployed my app here: https://ventureup.cyclic.app
 * The premise of this application is for project management with user specific control system
 * Tools re: HTML, CSS, JavaScript,  Express with EJS, Node.js, MongoDB, Google APIs (Google OAuth2), Cyclic
 
