@@ -2,58 +2,70 @@
 <%- include('../partials/head') %>
 
 
-<!-- insert nav.ejs -->
-<%- include('../partials/nav') %>
+    <!-- insert nav.ejs -->
+    <%- include('../partials/nav') %>
 
-<div>
-    <!-- <h1>Admin <i class="fa-solid fa-user"></i></h1> -->
-    <!-- <h3>Hello <!%= signedIn ? name : 'stranger' %>!</h3> -->
-</div> <br>
+        <div>
+            <!-- <h1>Admin <i class="fa-solid fa-user"></i></h1> -->
+            <!-- <h3>Hello <!%= signedIn ? name : 'stranger' %>!</h3> -->
+        </div> <br>
 
-    <div class="section">
-        <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
-                
-        <div class="admin-table"> 
-            <div class="adminform">
-                
-                <!-- <form action="./adminCtrl/create-book" method="post">
+        <div class="section">
+            <!-- <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2> -->
+
+            <div class="admin-table">
+                <div class="adminform">
+
+                    <!-- <form action="./adminCtrl/create-book" method="post">
                 <button type="add">ADD NEW HIKE</button></form> -->
 
-                <a href="./contentCreate">
-                <button type="add">ADD NEW ITEM</button></a>
+                    <a href="./contentCreate">
+                        <button type="add">ADD NEW ITEM</button></a>
 
-            </div>
+                </div>
 
-            <table class="admin">
-                <tr>
-                    <th>NAME</th>
-                    <th>LOCATION</th>
-                    <th>DATE</th>
-                    <th>RATING</th>
-                    <th>DETAILS</th>
-                    <th>EDIT</th>
-                    <th>DELETE</th>
-                </tr>
-                <%- console.log(content) %>
-                <% for (const Content of content) { %>
+                <table class="admin">
                     <tr>
-                    <td><%= Content.name %></td>
-                    <td><%= Content.location %></td>
-                    <td><%= Content.hikedAt %></td>
-                    <td><%= Content.rating %></td>
-                    <td><%= Content.details %></td>
+                        <th>NAME</th>
+                        <th>LOCATION</th>
+                        <th>DATE</th>
+                        <th>RATING</th>
+                        <th>DETAILS</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                    <%- console.log(content) %>
+                        <% for (const Content of content) { %>
+                            <tr>
+                                <td>
+                                    <%= Content.name %>
+                                </td>
+                                <td>
+                                    <%= Content.location %>
+                                </td>
+                                <td>
+                                    <%= Content.hikedAt %>
+                                </td>
+                                <td>
+                                    <%= Content.rating %>
+                                </td>
+                                <td>
+                                    <%= Content.details %>
+                                </td>
 
-                    <td>
-                        <a href="./updateContent/<%= Content._id %>">EDIT</a>
-                    </td>
-                    <td>
-                        <form action="/admin/<%= Content._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inline">
-                            <button class="btn" type="submit">DELETE</button>
-                          </form>  </td>
-                      
-                <% } %>
+                                <td>
+                                    <a href="./updateContent/<%= Content._id %>">EDIT</a>
+                                </td>
+                                <td>
+                                    <form action="/admin/<%= Content._id %>?_method=DELETE" method="POST"
+                                        enctype="application/x-www-form-urlencoded" class="inline">
+                                        <button class="btn" type="submit">DELETE</button>
+                                    </form>
+                                </td>
 
-                <!-- <tr>
+                                <% } %>
+
+                                    <!-- <tr>
                     <td>Mount Roberts</td>
                     <td>Moultonborough, NH</td>
                     <td>Mar 2023</td>
@@ -108,10 +120,10 @@
                     <td><form action="./updateContent" method="post"><button class="edit">EDIT</button></form></td>
                     <td><form action="./contentDetail" method="post"><button class="delete">DELETE</button></form></td>
                 </tr> -->
-            </table>
-            <!-- <div class="adminform2"><form action="./admin" method="post"><button type="submit">SUBMIT</button></form></div> -->
-        </div>  
-    </div>
+                </table>
+                <!-- <div class="adminform2"><form action="./admin" method="post"><button type="submit">SUBMIT</button></form></div> -->
+            </div>
+        </div>
 
-<!-- insert footer.ejs -->
-<%- include('../partials/footer') %>
+        <!-- insert footer.ejs -->
+        <%- include('../partials/footer') %>
