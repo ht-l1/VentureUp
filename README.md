@@ -10,17 +10,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## VentureUp
-I have deployed my app here: 🚀https://ventureup.cyclic.app
+I have deployed my app here: 🚀 https://ventureup-2gnp.onrender.com
 * The premise of this application is for project management with user specific control system
 * Tools re: HTML, CSS, JavaScript,  Express with EJS, Node.js, MongoDB, Google APIs (Google OAuth2), Cyclic
 
 ___
 ## Project Status 
-* By March 9, I completed my front end web design. 
+* As of June24, I deployed my app.
+* By June16, I implemented authentication including Google OAuth2 logins.
+* By June 10, I have emplemented MVC framework and MongoDB database.
 * By June 5, I have made more modifications refining my Front End over the span of March to May. 
-* By June 10, I have emplemented MVC framework and MongoDB database.  
-* By June16, I implemented authentication including Google OAuth2 logins. 
-* As of June24, I deployed my app. 
+* By March 9, I completed my front end web design. 
 
 ___
 ## Project Screenshots
